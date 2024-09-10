@@ -7,6 +7,5 @@ This plugin is released under GNU General Public License v3. See [LICENSE](https
 - Stop using NMS after spigot api adds .noPhysics
 - NMS for multiple versions
 - Optimization if possible
-- 
-
+  
  
