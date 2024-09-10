@@ -9,4 +9,4 @@ This plugin is released under GNU General Public License v3. See [LICENSE](https
 - NMS for multiple versions
 - Optimization if possible
   
- 
+ CURRENTLY ONLY SUPPORTED VERSION IS 1.21 and 1.21.1 IF YOU KNOW HOW TO ADD NMS SUPPORT FOR MULTIPLE VERSIONS PLEASE MAKE A PULL REQUEST
