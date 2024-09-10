@@ -1,0 +1,8 @@
+name: Dragging_Bodies
+version: '1'
+main: me.zedamc.dragging_bodies.main
+api-version: '1.21'
+commands:
+  sc:
+    usage: '/<command> [give|remove] <amount> <player>'
+    description: The main command
