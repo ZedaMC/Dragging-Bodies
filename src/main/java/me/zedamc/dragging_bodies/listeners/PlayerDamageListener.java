@@ -25,7 +25,6 @@ import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.block.BlockType;
-import org.bukkit.craftbukkit.v1_21_R1.entity.CraftEntity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Pig;
 import org.bukkit.entity.Player;
@@ -57,7 +56,7 @@ public class PlayerDamageListener implements Listener {
                         Location location = player.getLocation();
                         World world = location.getWorld();
                         e.setCancelled(true);
-                        player.setHealth(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue()/2);
+                        player.setHealth(player.getAttribute(Attribute.MAX_HEALTH).getBaseValue()/2);
                         Main.unconscious.add(player.getName());
                         player.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 6000, 1));
                         Location i;
@@ -71,7 +70,7 @@ public class PlayerDamageListener implements Listener {
                         i.setY(armorStandLocation.getBlockY() - 0.8);
                         Pig entity = world.spawn(i, Pig.class);
                         Main.EntityUUID.put(entity.getUniqueId(), "dragging");
-                        ((CraftEntity) entity).getHandle().noPhysics = true;
+                        entity.setNoPhysics(true);
                         entity.setAware(false);
                         entity.setInvisible(true);
                         entity.setGravity(false);

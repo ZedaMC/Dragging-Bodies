@@ -39,63 +39,14 @@
               <shadedPattern>me.zedamc.dragging_bodies.bstats</shadedPattern>
             </relocation>
           </relocations>
-          <filters>
-            <filter>
-              <artifact>*.*</artifact>
-              <excludes>
-                <exclude>module-info.class</exclude>
-                <exclude>META-INF/MANIFEST.MF</exclude>
-              </excludes>
-            </filter>
-          </filters>
-          <transformers>
-            <transformer>
-              <manifestEntries>
-                <Main-Class>me.zedamc.dragging_bodies.bstats</Main-Class>
-              </manifestEntries>
-            </transformer>
-          </transformers>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>net.md-5</groupId>
-        <artifactId>specialsource-maven-plugin</artifactId>
-        <version>2.0.3</version>
-        <executions>
-          <execution>
-            <id>remap-obf</id>
-            <phase>package</phase>
-            <goals>
-              <goal>remap</goal>
-            </goals>
-            <configuration>
-              <srgIn>org.spigotmc:minecraft-server:1.21.1-R0.1-SNAPSHOT:txt:maps-mojang</srgIn>
-              <reverse>true</reverse>
-              <remappedDependencies>org.spigotmc:spigot:1.21.1-R0.1-SNAPSHOT:jar:remapped-mojang</remappedDependencies>
-              <remappedArtifactAttached>true</remappedArtifactAttached>
-              <remappedClassifierName>remapped-obf</remappedClassifierName>
-            </configuration>
-          </execution>
-          <execution>
-            <id>remap-spigot</id>
-            <phase>package</phase>
-            <goals>
-              <goal>remap</goal>
-            </goals>
-            <configuration>
-              <inputFile>${project.build.directory}/${project.artifactId}-${project.version}-remapped-obf.jar</inputFile>
-              <srgIn>org.spigotmc:minecraft-server:1.21.1-R0.1-SNAPSHOT:csrg:maps-spigot</srgIn>
-              <remappedDependencies>org.spigotmc:spigot:1.21.1-R0.1-SNAPSHOT:jar:remapped-obf</remappedDependencies>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
   <repositories>
     <repository>
-      <id>spigotmc-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+      <id>papermc-repo</id>
+      <url>https://repo.papermc.io/repository/maven-public/</url>
     </repository>
     <repository>
       <id>sonatype</id>
@@ -104,10 +55,9 @@
   </repositories>
   <dependencies>
     <dependency>
-      <groupId>org.spigotmc</groupId>
-      <artifactId>spigot</artifactId>
-      <version>1.21.1-R0.1-SNAPSHOT</version>
-      <classifier>remapped-mojang</classifier>
+      <groupId>io.papermc.paper</groupId>
+      <artifactId>paper-api</artifactId>
+      <version>1.21.8-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>

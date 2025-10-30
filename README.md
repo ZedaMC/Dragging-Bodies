@@ -5,8 +5,6 @@
 This plugin is released under GNU General Public License v3. See [LICENSE](https://github.com/ZedaMC/Dragging-Bodies/blob/main/LICENSE).
 # Planned changes(pull requests appreciated)
 - More options in the config
-- Stop using NMS after spigot api adds .noPhysics
-- NMS for multiple versions
+~~- Stop using NMS after spigot api adds .noPhysics~~ paper added it
+~~- NMS for multiple versions~~
 - Optimization if possible
-  
- CURRENTLY ONLY SUPPORTED VERSION IS 1.21 and 1.21.1 IF YOU KNOW HOW TO ADD NMS SUPPORT FOR MULTIPLE VERSIONS PLEASE MAKE A PULL REQUEST
